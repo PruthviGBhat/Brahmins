@@ -1,0 +1,27 @@
+.container {
+    transition: filter 0.7s;
+}
+
+.active.container {
+    filter: blur(5px) brightness(0.7);
+}
+
+.popup-container{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: all 0.7s;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 415px;
+    height: 60vh;
+    top: 20%;  
+}
+
+.active.popup-container {
+    visibility: hidden;
+    opacity: 0;
+    top: 10%;
+}
