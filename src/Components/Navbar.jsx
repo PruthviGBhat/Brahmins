@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import menu from './MenuApi.js';
-import Menucard from './Menucard.js';
+import Menucard from './Menucard.jsx';
 
 const Navbar = ({addtocart}) => {
 

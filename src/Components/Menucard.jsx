@@ -3,7 +3,7 @@ import React from 'react'
 
 const Menucard = ({ menudata, addtocart }) => {
     const itemcount = (data) => {
-       
+        
     }
     return (
         <>

@@ -7,12 +7,14 @@ import Navbar from "./Navbar";
 import Myorders from './Myorders';
 
 const Routing = () => {
-
   const [orders,setorders]=useState([])
+
   const addtocart = (data) => {
     setorders([...orders,data])
   }
-
+  const removeFromOrders = (id) => {
+    setorders(prev => prev.filter(item => item.id !== id));
+}
   return (
     <>
       <Routes>
@@ -20,7 +22,7 @@ const Routing = () => {
         <Route path="/Dishes" element={<Navbar addtocart={addtocart} />} />
         <Route path="/Reservations" element={<Book />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path='/Orders' element={<Myorders orders={orders}/>} />
+        <Route path='/Orders' element={<Myorders orders={orders} removeFromOrders={removeFromOrders} />} />
       </Routes>
     </>
   )
